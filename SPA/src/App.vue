@@ -1,14 +1,7 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-      <el-tag>Tag 1</el-tag>
-      <el-tag type="success">Tag 2</el-tag>
-      <el-tag type="info">Tag 3</el-tag>
-      <el-tag type="warning">Tag 4</el-tag>
-      <el-tag type="danger">Tag 5</el-tag>
-    </div>
+    <navbar-front-component></navbar-front-component>
+<!--      <router-link to="/about">About</router-link>-->
     <router-view />
   </div>
 </template>
@@ -22,16 +15,14 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+body {
+  padding: 0px;
+  margin: 0px;
 }
 </style>
+<script>
+import NavbarFrontComponent from "@/components/Front-office/NavbarFrontComponent";
+export default {
+  components: {NavbarFrontComponent}
+}
+</script>

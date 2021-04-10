@@ -4,7 +4,8 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 import ElementUI from 'element-ui';
-import '../theme/index.css'
+import '../theme/index.css';
+import './assets/index.css';
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
