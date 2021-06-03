@@ -53,7 +53,7 @@
                 :value="1"
                 dense
             ></v-text-field>
-            <v-btn class="primary white--text" outlined tile dense><v-icon>mdi-cart</v-icon> ADD TO CART</v-btn>
+            <v-btn @click="addProductToMyBasket(1)" class="primary white--text" outlined tile dense><v-icon>mdi-cart</v-icon> ADD TO CART</v-btn>
             <v-btn class="ml-4" outlined tile>ADD TO WISHLIST</v-btn>
 
           </div>
@@ -365,8 +365,10 @@
 </template>
 <script>
     export default {
-        data: () => ({
+        data() {
+          return {
             rating:4.5,
+            row: 0,
             breadcrums: [
                 {
                     text: 'Home',
@@ -413,6 +415,12 @@
                     subtitle: "<span class='text--primary'>Britta Holt</span> &mdash; Lorem ipsum dolor sit amet, consectetur adipiscing elit"
                 },
             ],
-        }),
+        }
+        },
+      methods: {
+        addProductToMyBasket(productId) {
+            return this.axios('/api/basket', {basket_product: productId});
+        }
+      }
     }
 </script>

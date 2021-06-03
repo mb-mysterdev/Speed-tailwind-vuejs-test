@@ -1,6 +1,7 @@
 
 <?php
 
+use App\Speedshopping\Basket\BasketController;
 use App\Speedshopping\Product\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +22,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/products', [ProductController::class, 'getAll']);
+
+
+// Basket
+Route::post('/basket', [BasketController::class, 'add']);

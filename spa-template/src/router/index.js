@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
-import Shop from '@/components/Shop'
-import Product from '@/components/Product'
-import Blog from '@/components/Blog'
-import Post from '@/components/Post'
-import Cart from '@/components/Cart'
-import Layout from '@/components/Layout'
+import Home from '@/views/Home'
+import Shop from '@/views/Shop'
+import Product from '@/views/Product'
+import Blog from '@/views/Blog'
+import Post from '@/views/Post'
+import Cart from '@/views/Cart'
+import Layout from '@/views/Layout'
 
 Vue.use(Router)
 
